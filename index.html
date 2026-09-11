@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OdontoPlus - Odontologia Especializada</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (Ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Estilos da Aplicação -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cabeçalho e Navegação -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo"><i class="fa-solid fa-tooth"></i> Odonto<span>Plus</span></h1>
+      <ul class="nav-links" style="align-items: center;">
+        <li><a href="#inicio"><i class="fa-solid fa-house"></i> Início</a></li>
+        <li><a href="#servicos"><i class="fa-solid fa-briefcase-medical"></i> Serviços</a></li>
+        <li><a href="#agendamento"><i class="fa-solid fa-calendar-check"></i> Agendamento</a></li>
+        <li><a href="login.html" style="color: var(--primary-color); font-weight: 600;"><i class="fa-solid fa-lock"></i> Área Restrita</a></li>
+        <li>
+          <button onclick="toggleTheme()" style="background: none; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 500;">
+            <i class="fa-solid fa-moon"></i> Tema
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Principal -->
+  <section id="inicio" class="hero">
+    <h2>Seu sorriso em boas mãos</h2>
+    <p>Atendimento odontológico especializado com tecnologia de ponta, conforto e cuidado para toda a sua família.</p>
+    <a href="#agendamento" class="btn" style="text-decoration: none; display: inline-block;"><i class="fa-solid fa-calendar-plus"></i> Agendar Consulta</a>
+  </section>
+
+  <!-- Seção de Serviços -->
+  <section id="servicos" style="padding: 60px 0;">
+    <h2 style="text-align: center; margin-bottom: 10px; color: var(--primary-color);">Nossos Serviços</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Tratamentos completos para a sua saúde bucal</p>
+
+    <div class="services-container">
+      <div class="card">
+        <i class="fa-solid fa-sparkles"></i>
+        <h3 style="margin-bottom: 10px;">Limpeza e Prevenção</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Remoção de tártaro, placa bacteriana e profilaxia para manter seu sorriso saudável.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-teeth-open"></i>
+        <h3 style="margin-bottom: 10px;">Ortodontia</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Aparelhos estéticos e convencionais para alinhamento e correção dentária.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3 style="margin-bottom: 10px;">Clareamento Dental</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Técnicas avançadas para devolver o brilho e a brancura natural dos seus dentes.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-teeth"></i>
+        <h3 style="margin-bottom: 10px;">Implantes</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Reabilitação oral segura e permanente para restaurar sua mastigação e autoestima.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Agendamento -->
+  <section id="agendamento" style="background: white; padding: 60px 8%; max-width: 600px; margin: 40px auto; border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
+    <h2 style="text-align: center; margin-bottom: 10px; color: var(--primary-color);"><i class="fa-solid fa-calendar-days"></i> Agende sua Consulta</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 25px;">Preencha os dados abaixo para solicitar o seu atendimento.</p>
+
+    <form id="appointment-form" style="display: flex; flex-direction: column; gap: 15px;">
+      <div>
+        <label for="name" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Nome Completo:</label>
+        <input type="text" id="name" placeholder="Digite seu nome" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem;">
+        <label for="date" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Data Desejada:</label>
+        <input type="date" id="date" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
+      </div>
+
+      <div>
+        <label for="phone" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Telefone / WhatsApp:</label>
+        <input type="text" id="phone" placeholder="(00) 00000-0000" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem;">
+      </div>
+
+      <div>
+        <label for="service" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Serviço Desejado:</label>
+        <select id="service" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
+          <option value="Limpeza e Prevenção">Limpeza e Prevenção</option>
+          <option value="Ortodontia">Ortodontia</option>
+          <option value="Clareamento Dental">Clareamento Dental</option>
+          <option value="Implantes">Implantes</option>
+          <option value="Avaliação Geral">Avaliação Geral</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn" style="margin-top: 10px; width: 100%; font-size: 1rem;"><i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer style="text-align: center; padding: 25px; color: var(--text-muted); font-size: 0.9rem; margin-top: 40px;">
+    <p>&copy; 2026 OdontoPlus - Todos os direitos reservados. Projeto Acadêmico TCC.</p>
+  </footer>
+
+  <!-- Script da Aplicação -->
+  <script src="script.js"></script>
+</body>
+</html>

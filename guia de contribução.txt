@@ -1,0 +1,273 @@
+GUIA DE CONTRIBUIÇÃO
+
+1. INTRODUÇÃO
+
+Este documento apresenta as orientações para contribuição e desenvolvimento do Sistema Web para Clínica Odontológica.
+
+O objetivo do guia é manter o projeto organizado, facilitar a manutenção do código e estabelecer padrões para a criação e alteração das funcionalidades do sistema.
+
+2. OBJETIVO
+
+As contribuições devem buscar melhorar o funcionamento, a segurança, a organização e a experiência de utilização do sistema.
+
+Qualquer alteração realizada no projeto deverá seguir os padrões definidos neste documento.
+
+3. ESTRUTURA DO PROJETO
+
+Os arquivos do projeto deverão ser organizados de acordo com suas respectivas funções.
+
+A estrutura poderá seguir o seguinte modelo:
+
+/clinica-odontologica
+
+```
+/css
+    style.css
+    login.css
+    admin.css
+
+/js
+    script.js
+    login.js
+    agendamento.js
+    admin.js
+
+/img
+    logo.png
+    imagens dos serviços
+
+/pages
+    login.html
+    cadastro.html
+    agendamento.html
+    admin.html
+
+index.html
+```
+
+Os nomes das pastas e arquivos devem ser claros e relacionados à função que desempenham.
+
+4. PADRÃO DE CÓDIGO
+
+O código deverá ser escrito de forma organizada e de fácil compreensão.
+
+Recomendações:
+
+* Utilizar nomes claros para variáveis, funções, classes e arquivos.
+* Evitar códigos desnecessários ou repetidos.
+* Utilizar indentação adequada.
+* Separar HTML, CSS e JavaScript sempre que possível.
+* Inserir comentários somente quando forem realmente necessários.
+* Evitar deixar códigos de teste no projeto final.
+* Manter a estrutura dos arquivos organizada.
+
+5. HTML
+
+Os arquivos HTML deverão utilizar uma estrutura organizada e sem elementos desnecessários.
+
+Os elementos deverão possuir nomes e funções claras.
+
+Sempre que possível, deverão ser utilizados elementos semânticos, como:
+
+header
+nav
+main
+section
+article
+footer
+
+Os formulários deverão possuir campos identificados corretamente e informações claras para o usuário.
+
+6. CSS
+
+Os estilos deverão ser organizados de forma que seja fácil localizar e modificar cada parte da interface.
+
+Recomendações:
+
+* Evitar repetir estilos desnecessariamente.
+* Utilizar classes com nomes claros.
+* Manter a organização por seções.
+* Criar estilos responsivos para diferentes tamanhos de tela.
+* Evitar utilizar estilos diretamente no HTML quando não for necessário.
+
+7. JAVASCRIPT
+
+O JavaScript deverá ser utilizado para implementar as funcionalidades e interações do sistema.
+
+Entre as principais funcionalidades estão:
+
+* Login.
+* Cadastro.
+* Validação de formulários.
+* Agendamento.
+* Integração com WhatsApp.
+* Controle do painel administrativo.
+* Alteração de status dos agendamentos.
+* Interação com o banco de dados.
+
+As funções deverão possuir nomes que indiquem claramente sua finalidade.
+
+8. BANCO DE DADOS
+
+As informações armazenadas no banco de dados deverão ser organizadas de maneira adequada.
+
+Os dados dos pacientes e dos agendamentos deverão possuir controle de acesso.
+
+Cada usuário deverá conseguir acessar somente as informações permitidas para seu perfil.
+
+O administrador terá permissões maiores para gerenciamento do sistema.
+
+9. AUTENTICAÇÃO
+
+O sistema deverá possuir controle de autenticação para proteger áreas restritas.
+
+Os usuários deverão realizar login para acessar funcionalidades destinadas aos pacientes.
+
+O painel administrativo deverá possuir proteção adicional, permitindo acesso somente ao administrador autorizado.
+
+Informações de acesso não deverão ser armazenadas diretamente no código-fonte.
+
+10. AGENDAMENTOS
+
+As alterações relacionadas aos agendamentos deverão preservar o funcionamento do formulário e da integração com o WhatsApp.
+
+Ao realizar uma solicitação, o sistema deverá registrar as informações necessárias e direcionar o paciente para o WhatsApp da clínica.
+
+Qualquer alteração nessa funcionalidade deverá ser testada antes de ser considerada concluída.
+
+11. PAINEL ADMINISTRATIVO
+
+O painel administrativo deverá ser utilizado somente por usuários autorizados.
+
+As alterações no painel deverão preservar as seguintes funções:
+
+* Visualização dos agendamentos.
+* Visualização das informações necessárias dos pacientes.
+* Alteração do status dos atendimentos.
+* Organização das solicitações.
+* Controle de acesso.
+
+12. TESTES
+
+Antes de adicionar uma alteração ao projeto final, deverá ser realizada uma verificação da funcionalidade modificada.
+
+Deverão ser testados:
+
+* Cadastro de usuário.
+* Login.
+* Logout.
+* Agendamento.
+* Envio para WhatsApp.
+* Acesso do paciente.
+* Acesso do administrador.
+* Visualização dos agendamentos.
+* Alteração do status.
+* Funcionamento em dispositivos móveis.
+
+Também deverá ser verificado se a alteração não prejudicou funcionalidades que já estavam funcionando.
+
+13. COMMITS
+
+As alterações realizadas no projeto deverão ser registradas utilizando commits organizados.
+
+Os commits deverão possuir mensagens curtas e objetivas.
+
+Exemplos:
+
+feat: adiciona sistema de cadastro
+
+feat: adiciona painel administrativo
+
+fix: corrige formulário de agendamento
+
+fix: corrige login do usuário
+
+style: ajusta responsividade da página
+
+docs: atualiza documentação
+
+14. BRANCHES
+
+Quando necessário, novas funcionalidades poderão ser desenvolvidas em branches separadas.
+
+Exemplos:
+
+feature/login
+
+feature/agendamento
+
+feature/painel-admin
+
+fix/cadastro
+
+fix/whatsapp
+
+Após os testes, as alterações poderão ser incorporadas à branch principal do projeto.
+
+15. RESPONSABILIDADE DO CONTRIBUIDOR
+
+A pessoa responsável por uma alteração deverá:
+
+* Entender a funcionalidade antes de modificá-la.
+* Evitar alterações desnecessárias em outras partes do sistema.
+* Testar as funcionalidades modificadas.
+* Verificar se o sistema continua funcionando corretamente.
+* Manter o padrão de organização do projeto.
+* Registrar alterações importantes.
+
+16. SEGURANÇA
+
+Não deverão ser adicionadas ao código informações sensíveis, como:
+
+* Senhas.
+* Chaves privadas.
+* Tokens secretos.
+* Credenciais administrativas.
+* Informações pessoais desnecessárias.
+
+Informações sensíveis deverão ser armazenadas de maneira segura e nunca disponibilizadas publicamente no repositório.
+
+17. RESPONSIVIDADE
+
+Toda nova funcionalidade visual deverá ser verificada em diferentes tamanhos de tela.
+
+O sistema deverá funcionar adequadamente em:
+
+* Computadores.
+* Tablets.
+* Smartphones.
+
+Botões, formulários, menus e demais elementos deverão permanecer acessíveis e utilizáveis em telas menores.
+
+18. PADRÃO DE INTERFACE
+
+As novas páginas e funcionalidades deverão seguir a identidade visual definida para a clínica.
+
+Deverão ser mantidos padrões semelhantes de:
+
+* Cores.
+* Tipografia.
+* Botões.
+* Espaçamentos.
+* Formulários.
+* Cabeçalho.
+* Rodapé.
+
+Alterações visuais não deverão prejudicar a usabilidade das funcionalidades existentes.
+
+19. SOLICITAÇÃO DE ALTERAÇÕES
+
+Antes de realizar uma alteração importante, deverá ser identificado:
+
+* Qual problema será solucionado.
+* Qual funcionalidade será adicionada ou modificada.
+* Quais arquivos serão afetados.
+* Se a alteração poderá afetar outras funcionalidades.
+
+Após a alteração, deverão ser realizados testes para verificar o funcionamento do sistema.
+
+20. CONCLUSÃO
+
+Este Guia de Contribuição tem como objetivo manter o desenvolvimento do Sistema Web para Clínica Odontológica organizado, seguro e padronizado.
+
+Todas as contribuições deverão respeitar as orientações apresentadas neste documento, buscando preservar as funcionalidades existentes e garantir a qualidade do projeto.
