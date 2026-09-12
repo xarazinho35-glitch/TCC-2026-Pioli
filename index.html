@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<!-- Cabeçalho e Navegação -->
+  <!-- Cabeçalho e Navegação -->
   <header>
     <nav class="navbar">
       <h1 class="logo"><i class="fa-solid fa-tooth"></i> Odonto<span>Plus</span></h1>
@@ -26,8 +26,7 @@
         <li><a href="#inicio"><i class="fa-solid fa-house"></i> Início</a></li>
         <li><a href="#servicos"><i class="fa-solid fa-briefcase-medical"></i> Serviços</a></li>
         <li><a href="#agendamento"><i class="fa-solid fa-calendar-check"></i> Agendamento</a></li>
-        <li><a href="login.html" style="color: var(--primary-color); font-weight: 600;"><i class="fa-solid fa-lock"></i> Área Restrita</a></li>
-        <li>
+        </li>
           <button onclick="toggleTheme()" style="background: none; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 500;">
             <i class="fa-solid fa-moon"></i> Tema
           </button>
@@ -36,11 +35,18 @@
     </nav>
   </header>
 
-  <!-- Banner Principal -->
+  <!-- Banner Principal (Hero) -->
   <section id="inicio" class="hero">
-    <h2>Seu sorriso em boas mãos</h2>
-    <p>Atendimento odontológico especializado com tecnologia de ponta, conforto e cuidado para toda a sua família.</p>
-    <a href="#agendamento" class="btn" style="text-decoration: none; display: inline-block;"><i class="fa-solid fa-calendar-plus"></i> Agendar Consulta</a>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h2>Seu sorriso em boas mãos</h2>
+        <p>Atendimento odontológico especializado com tecnologia de ponta, conforto e cuidado para toda a sua família.</p>
+        <a href="#agendamento" class="btn" style="text-decoration: none; display: inline-block;"><i class="fa-solid fa-calendar-plus"></i> Agendar Consulta</a>
+      </div>
+      <div class="hero-image">
+        <img src="imagemsorriso.png" alt="Paciente com sorriso radiante">
+      </div>
+    </div>
   </section>
 
   <!-- Seção de Serviços -->
@@ -50,7 +56,7 @@
 
     <div class="services-container">
       <div class="card">
-        <i class="fa-solid fa-sparkles"></i>
+        <i class="fa-solid fa-tooth"></i>
         <h3 style="margin-bottom: 10px;">Limpeza e Prevenção</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem;">Remoção de tártaro, placa bacteriana e profilaxia para manter seu sorriso saudável.</p>
       </div>
@@ -84,7 +90,7 @@
       <div>
         <label for="name" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Nome Completo:</label>
         <input type="text" id="name" placeholder="Digite seu nome" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem;">
-        <label for="date" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Data Desejada:</label>
+        <label for="date" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px; margin-top: 10px;">Data Desejada:</label>
         <input type="date" id="date" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
       </div>
 
@@ -108,10 +114,80 @@
     </form>
   </section>
 
-  <!-- Rodapé -->
-  <footer style="text-align: center; padding: 25px; color: var(--text-muted); font-size: 0.9rem; margin-top: 40px;">
-    <p>&copy; 2026 OdontoPlus - Todos os direitos reservados. Projeto Acadêmico TCC.</p>
+<!-- Seção FAQ / Dúvidas Frequentes -->
+  <section id="faq" style="padding: 60px 8%; max-width: 900px; margin: 0 auto;">
+    <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">Dúvidas Frequentes</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Clique nas perguntas para ver as respostas</p>
+    
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary>
+          <span><i class="fa-solid fa-chevron-right faq-icon"></i> Aceitam convênio odontológico?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Sim! Trabalhamos com os principais convênios do mercado e também oferecemos condições facilitadas de parcelamento para tratamentos particulares.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span><i class="fa-solid fa-chevron-right faq-icon"></i> Como funciona a primeira avaliação?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Na primeira consulta é realizado um diagnóstico completo da sua saúde bucal, incluindo exames preventivos se necessário, para elaborar um plano de tratamento personalizado.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span><i class="fa-solid fa-chevron-right faq-icon"></i> Quais são as formas de pagamento?</span>
+        </summary>
+        <div class="faq-answer">
+          <p>Aceitamos cartões de crédito e débito, Pix, boleto bancário e parcelamento próprio dependendo do plano de tratamento escolhido.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Rodapé Completo -->
+  <footer class="footer-completo">
+    <div class="footer-container">
+      <div>
+        <h3 class="logo"><i class="fa-solid fa-tooth"></i> Odonto<span>Plus</span></h3>
+        <p style="font-size: 0.9rem; margin-top: 10px;">Cuidando da sua saúde bucal com tecnologia e carinho.</p>
+      </div>
+
+      <div>
+        <h4>Horário de Atendimento</h4>
+        <p>Segunda a Sexta: 08h às 19h</p>
+        <p>Sábado: 08h às 12h</p>
+      </div>
+
+      <div>
+        <h4>Onde Estamos</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Av. Principal, 1000 - Centro</p>
+        <div class="social-links" style="margin-top: 10px;">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 OdontoPlus. Todos os direitos reservados. Projeto Acadêmico TCC.</p>
+    </div>
   </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast de Notificação (Mensagem de Sucesso) -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-message">Agendamento solicitado com sucesso! Entraremos em contato.</span>
+  </div>
 
   <!-- Script da Aplicação -->
   <script src="script.js"></script>

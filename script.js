@@ -83,3 +83,32 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('dark-theme');
   }
 });
+
+// Função para exibir a notificação Toast
+function showToast(mensagem) {
+  const toast = document.getElementById("toast");
+  const toastMessage = document.getElementById("toast-message");
+
+  if (mensagem) {
+    toastMessage.textContent = mensagem;
+  }
+
+  // Mostra o toast
+  toast.classList.add("show");
+
+  // Esconde automaticamente após 4 segundos (4000ms)
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 4000);
+}
+
+// Evento de envio do formulário de agendamento
+document.getElementById("appointment-form")?.addEventListener("submit", function(e) {
+  e.preventDefault(); // Evita recarregar a página
+
+  // Exibe o Toast de sucesso
+  showToast("Agendamento solicitado com sucesso! Entraremos em contato.");
+
+  // Limpa os campos do formulário
+  this.reset();
+});
