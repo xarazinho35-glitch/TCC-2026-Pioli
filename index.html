@@ -26,7 +26,7 @@
         <li><a href="#inicio"><i class="fa-solid fa-house"></i> Início</a></li>
         <li><a href="#servicos"><i class="fa-solid fa-briefcase-medical"></i> Serviços</a></li>
         <li><a href="#agendamento"><i class="fa-solid fa-calendar-check"></i> Agendamento</a></li>
-        </li>
+        <li>
           <button onclick="toggleTheme()" style="background: none; border: 1px solid var(--primary-color); color: var(--primary-color); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 500;">
             <i class="fa-solid fa-moon"></i> Tema
           </button>
@@ -49,72 +49,91 @@
     </div>
   </section>
 
-  <!-- Seção de Serviços -->
+<!-- Seção de Serviços -->
   <section id="servicos" style="padding: 60px 0;">
     <h2 style="text-align: center; margin-bottom: 10px; color: var(--primary-color);">Nossos Serviços</h2>
     <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Tratamentos completos para a sua saúde bucal</p>
 
     <div class="services-container">
-      <div class="card">
-        <i class="fa-solid fa-tooth"></i>
-        <h3 style="margin-bottom: 10px;">Limpeza e Prevenção</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Remoção de tártaro, placa bacteriana e profilaxia para manter seu sorriso saudável.</p>
-      </div>
+  <div class="card">
+    <i class="fa-solid fa-tooth"></i>
+    <h3 style="margin-bottom: 10px;">Limpeza e Prevenção</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Remoção de tártaro, placa bacteriana e profilaxia para manter seu sorriso saudável.</p>
+  </div>
 
-      <div class="card">
-        <i class="fa-solid fa-teeth-open"></i>
-        <h3 style="margin-bottom: 10px;">Ortodontia</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Aparelhos estéticos e convencionais para alinhamento e correção dentária.</p>
-      </div>
+  <div class="card">
+    <i class="fa-solid fa-teeth-open"></i>
+    <h3 style="margin-bottom: 10px;">Ortodontia</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Aparelhos estéticos e convencionais para alinhamento e correção dentária.</p>
+  </div>
 
-      <div class="card">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-        <h3 style="margin-bottom: 10px;">Clareamento Dental</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Técnicas avançadas para devolver o brilho e a brancura natural dos seus dentes.</p>
-      </div>
+  <div class="card">
+    <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <h3 style="margin-bottom: 10px;">Clareamento Dental</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Técnicas avançadas para devolver o brilho e a brancura natural dos seus dentes.</p>
+  </div>
 
-      <div class="card">
-        <i class="fa-solid fa-teeth"></i>
-        <h3 style="margin-bottom: 10px;">Implantes</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Reabilitação oral segura e permanente para restaurar sua mastigação e autoestima.</p>
-      </div>
-    </div>
+  <div class="card">
+    <i class="fa-solid fa-teeth"></i>
+    <h3 style="margin-bottom: 10px;">Implantes</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Reabilitação oral segura e permanente para restaurar sua mastigação e autoestima.</p>
+  </div>
+
+  <!-- Ícone alterado para fa-gem (diamante/estética) ou fa-sparkles -->
+  <div class="card">
+    <i class="fa-solid fa-gem"></i>
+    <h3 style="margin-bottom: 10px;">Restauração Estética</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Recuperação da estrutura dental com materiais estéticos de alta durabilidade e acabamento natural.</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-clipboard-check"></i>
+    <h3 style="margin-bottom: 10px;">Avaliação Geral</h3>
+    <p style="color: var(--text-muted); font-size: 0.9rem;">Exame minucioso da saúde bucal para planejamento e diagnóstico completo do seu tratamento.</p>
+  </div>
+</div>
   </section>
 
   <!-- Seção de Agendamento -->
-  <section id="agendamento" style="background: white; padding: 60px 8%; max-width: 600px; margin: 40px auto; border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
-    <h2 style="text-align: center; margin-bottom: 10px; color: var(--primary-color);"><i class="fa-solid fa-calendar-days"></i> Agende sua Consulta</h2>
-    <p style="text-align: center; color: var(--text-muted); margin-bottom: 25px;">Preencha os dados abaixo para solicitar o seu atendimento.</p>
+  <section id="agendamento" style="padding: 60px 8%; max-width: 600px; margin: 0 auto;">
+    <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">Agende sua Consulta</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Preencha os dados abaixo e entraremos em contato.</p>
 
-    <form id="appointment-form" style="display: flex; flex-direction: column; gap: 15px;">
+    <form id="appointment-form" onsubmit="handleAppointmentSubmit(event)" style="display: flex; flex-direction: column; gap: 15px;">
       <div>
-        <label for="name" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Nome Completo:</label>
-        <input type="text" id="name" placeholder="Digite seu nome" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem;">
-        <label for="date" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px; margin-top: 10px;">Data Desejada:</label>
-        <input type="date" id="date" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
+        <label for="name" style="font-weight: 500; display: block; margin-bottom: 5px;">Nome Completo</label>
+        <input type="text" id="name" required placeholder="Digite seu nome" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;">
       </div>
 
       <div>
-        <label for="phone" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Telefone / WhatsApp:</label>
-        <input type="text" id="phone" placeholder="(00) 00000-0000" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem;">
+        <label for="phone" style="font-weight: 500; display: block; margin-bottom: 5px;">WhatsApp / Telefone</label>
+        <input type="tel" id="phone" required placeholder="(34) 99999-9999" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;">
       </div>
 
       <div>
-        <label for="service" style="font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 5px;">Serviço Desejado:</label>
-        <select id="service" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; background: white;">
-          <option value="Limpeza e Prevenção">Limpeza e Prevenção</option>
-          <option value="Ortodontia">Ortodontia</option>
-          <option value="Clareamento Dental">Clareamento Dental</option>
-          <option value="Implantes">Implantes</option>
+        <label for="service" style="font-weight: 500; display: block; margin-bottom: 5px;">Serviço Desejado</label>
+        <select id="service" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;">
+          <option value="">Selecione um serviço...</option>
+          <option value="Limpeza e Clareamento">Limpeza e Clareamento</option>
+          <option value="Ortodontia (Aparelho)">Ortodontia (Aparelho)</option>
+          <option value="Implante Dentário">Implante Dentário</option>
+          <option value="Restauração">Restauração</option>
           <option value="Avaliação Geral">Avaliação Geral</option>
         </select>
       </div>
 
-      <button type="submit" class="btn" style="margin-top: 10px; width: 100%; font-size: 1rem;"><i class="fa-brands fa-whatsapp"></i> Confirmar Agendamento</button>
+      <div>
+        <label for="date" style="font-weight: 500; display: block; margin-bottom: 5px;">Data Preferencial</label>
+        <input type="date" id="date" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px;">
+      </div>
+
+      <button type="submit" class="btn" style="padding: 14px; font-weight: 600; font-size: 1rem; cursor: pointer; border: none; background: var(--primary-color); color: white; border-radius: 8px; margin-top: 10px;">
+        <i class="fa-solid fa-calendar-check"></i> Confirmar Agendamento
+      </button>
     </form>
   </section>
 
-<!-- Seção FAQ / Dúvidas Frequentes -->
+  <!-- Seção FAQ / Dúvidas Frequentes -->
   <section id="faq" style="padding: 60px 8%; max-width: 900px; margin: 0 auto;">
     <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">Dúvidas Frequentes</h2>
     <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Clique nas perguntas para ver as respostas</p>
@@ -179,7 +198,7 @@
   </footer>
 
   <!-- Botão Flutuante do WhatsApp -->
-  <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+  <a href="https://wa.me/5534992480848" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -191,5 +210,52 @@
 
   <!-- Script da Aplicação -->
   <script src="script.js"></script>
+
+  <script>
+    function handleAppointmentSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+
+      let formattedDate = date;
+      if (date) {
+        const parts = date.split('-');
+        if (parts.length === 3) formattedDate = `${parts[2]}/${parts[1]}/${parts[0]}`;
+      }
+
+      // 1. Salva os dados silenciosamente no Dashboard
+      const newAppointment = {
+        name: name,
+        phone: phone,
+        service: service,
+        date: date,
+        status: "Pendente"
+      };
+
+      const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+      appointments.unshift(newAppointment);
+      localStorage.setItem('appointments', JSON.stringify(appointments));
+
+      // 2. Abre direto a conversa no WhatsApp sem pop-up de alerta
+      const clinicPhone = "5534992480848";
+      
+      const message = encodeURIComponent(
+        `Olá! Gostaria de agendar uma consulta.\n\n` +
+        `*Nome:* ${name}\n` +
+        `*Telefone:* ${phone}\n` +
+        `*Serviço:* ${service}\n` +
+        `*Data preferencial:* ${formattedDate}`
+      );
+
+      // Redireciona diretamente para o WhatsApp
+      window.open(`https://api.whatsapp.com/send?phone=${clinicPhone}&text=${message}`, '_blank');
+
+      // Reseta os campos do formulário
+      document.getElementById('appointment-form').reset();
+    }
+  </script>
 </body>
 </html>
