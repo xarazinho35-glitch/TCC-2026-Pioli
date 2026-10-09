@@ -162,6 +162,7 @@ RNF01 - Responsividade: O sistema deverá funcionar adequadamente em computadore
 
 RNF02 - Usabilidade: A interface deverá ser simples e intuitiva para facilitar a utilização pelos pacientes.
 
+
 RNF03 - Segurança: As informações dos usuários deverão possuir controle de acesso adequado.
 
 RNF04 - Desempenho: As páginas deverão carregar de maneira rápida e eficiente.
