@@ -153,7 +153,7 @@ RF09 - O sistema deverá possuir uma área exclusiva para o administrador.
 RF10 - O administrador deverá conseguir visualizar os agendamentos solicitados.
 
 RF11 - O administrador deverá conseguir alterar o status de uma solicitação.
-
+-
 RF12 - O sistema deverá impedir o acesso de pacientes ao painel administrativo.
 
 8. REQUISITOS NÃO FUNCIONAIS
